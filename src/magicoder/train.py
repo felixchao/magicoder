@@ -5,15 +5,15 @@ import torch
 from datasets import load_dataset
 from transformers import HfArgumentParser, Trainer, TrainingArguments
 
-from magicoder.llm_wrapper import (
+from llm_wrapper import (
     DecodingConfig,
     EncodingConfig,
     TokenizationContext,
     get_model_context,
     pad_sequences,
 )
-from magicoder.prompt_template import MAGICODER_PROMPT
-from magicoder.utils import N_CORES
+from prompt_template import MAGICODER_PROMPT
+from utils import N_CORES
 
 
 @dataclass(frozen=True)
